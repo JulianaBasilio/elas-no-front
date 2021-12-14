@@ -3,8 +3,10 @@
 /* General Styles */
 :root {
     --wisteria: #9b59b6;
+    --purple: #8e44ad;
     --woodsmoke: #121214;
     --racing-green: #060A08;
+    --shark: #29292e;
     --mischka: #e1e1e6;
 
     --gutter: 16px;
@@ -12,6 +14,22 @@
 
 body {
     font-family: 'Poppins', sans-serif;
+}
+
+section {
+    padding: var(--gutter);
+    border-bottom: 1px solid var(--shark);
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+p {
+    font-weight: 300;
+    line-height: 1.4;
+    margin-bottom: calc(var(--gutter)/2);
 }
 
 .container {
@@ -26,25 +44,6 @@ body {
     align-items: center;
 }
 
-/* Header */
-header {
-    background-color: var(--woodsmoke);
-
-    padding: var(--gutter);
-}
-
-header .logo {
-    font-size: 38px;
-    color: var(--wisteria);
-}
-
-header span {
-    font-size: 20px;
-    color: var(--mischka);
-
-    display: block;
-}
-
 .btn-register {
     color: var(--mischka);
     text-decoration: none;
@@ -53,10 +52,80 @@ header span {
     border-radius: 8px;
 
     padding: var(--gutter);
+    display: inline-block;
 
     transition: all .3s ease;
 }
 
 .btn-register:hover {
     background-color: var(--wisteria);
+}
+
+.btn-purple {
+    background-color: var(--wisteria);
+}
+
+.btn-purple:hover {
+    background-color: var(--purple);
+}
+
+.txt-purple {
+    color: var(--wisteria);
+}
+
+.txt-thin {
+    font-weight: 100;
+}
+
+/* Header */
+header {
+    background-color: var(--woodsmoke);
+    border-bottom: 1px solid var(--shark);
+
+    padding: var(--gutter);
+}
+
+.logo {
+    font-size: 38px;
+    color: var(--wisteria);
+}
+
+.logo span {
+    font-size: 20px;
+    color: var(--mischka);
+
+    display: block;
+}
+
+/* Principal Banner */
+.principal-banner {
+    background: linear-gradient(270deg, var(--racing-green) 0%, var(--woodsmoke) 100%);
+    color: var(--mischka);
+
+    padding-bottom: 80px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.principal-banner h2 {
+    margin: var(--gutter) 0;
+}
+
+.img-content {
+    max-width: 266px;
+    margin: 10px auto 0;
+}
+
+.img-content img {
+    width: 100%;
+}
+
+.content {
+    text-align: center;
+}
+
+.prerequisite {
+    font-size: 14px;
+    margin-bottom: 20px;
 }
